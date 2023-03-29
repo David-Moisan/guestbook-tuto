@@ -9,6 +9,8 @@
 
     {% if comments|length > 0 %}
 
+        <div>There are {{ comments|length }} comments.</div>
+
         {% for comment in comments %}
             {% if comment.photoFilename %}
                 <img src="{{ asset('uploads/photos/' ~ comment.photofilename) }}" />
@@ -22,6 +24,13 @@
             <p>{{ comment.text }}</p>
 
         {% endfor %}
+
+        {% if previous >= 0 %}
+            <a href="{{ path('conference', {id: conference.id, offset: previous}) }}">Previous</a>
+        {% endif %}
+        {% if next < comments|length %}
+            <a href="{{ path('conference', {id: conference.id, offset: next}) }}">Next</a>
+        {% endif %}
     
     {% else %}
 
