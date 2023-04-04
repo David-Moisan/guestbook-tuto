@@ -14,6 +14,11 @@ services:
       # You may use a bind-mounted host directory instead, so that it is harder to accidentally remove the volume and lose all your data!
       # - ./docker/db/data:/var/lib/postgresql/data:rw
 ###< doctrine/doctrine-bundle ###
+  mailcatcher:
+    image: schickling/mailcatcher:latest
+    ports:
+      - "1080:1080"
+      - "1025:1025"
 
 volumes:
 ###> doctrine/doctrine-bundle ###
