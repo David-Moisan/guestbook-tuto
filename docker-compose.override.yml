@@ -17,7 +17,7 @@ services:
   blackfire:
     image: blackfire/blackfire:2
     # uncomment to store Blackfire credentials in a local .env.local file
-    #env_file: .env.local
+    env_file: .env
     environment:
       BLACKFIRE_LOG_LEVEL: 4
     ports: ["8307"]
