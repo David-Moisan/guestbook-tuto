@@ -40,7 +40,7 @@ class CommentMessageHandler
         if ($this->commentStateMachine->can($comment, 'accept')) {
             $score = $this->spamChecker->getSpamScore($comment, $message->getContext());
             $transition = match ($score) {
-                2 => 'project_spam',
+                2 => 'reject_spam',
                 1 => 'might_be_spam',
                 default => 'accept',
             };
