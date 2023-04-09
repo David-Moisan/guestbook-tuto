@@ -15,6 +15,7 @@
     "@symfony/webpack-encore": "^4.2.0",
     "babel-preset-preact": "^2.0.0",
     "bootstrap": "^5.2.3",
+    "cordova": "^11.1.0",
     "html-webpack-plugin": "^5.5.0",
     "node-sass": "^8.0.0",
     "preact": "^10.13.2",
