@@ -26,6 +26,10 @@ services:
       BLACKFIRE_SERVER_ID: "34071571-7e31-4865-9230-661d4441c03a"
       BLACKFIRE_SERVER_TOKEN: "0aa568653bb2e832678780a9a33b2558fe28beb27ffa5c588c515ae75c953250"
 
+  redis:
+    image: redis:5-alpine
+    ports: [6379]
+
 volumes:
 ###> doctrine/doctrine-bundle ###
   database_data:
